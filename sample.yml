@@ -1,0 +1,15 @@
+---
+  - name: lakshman is doing something
+    hosts: local
+    connection: local
+    tasks:
+      - name: line insert
+        lineinfile:
+          path: /tmp/Input.txt
+          line: 'Added Line 2'
+          insertbefore: 'Add*'
+          firstmatch: yes
+          line: 'Line 5'
+          line: 'line 6'
+          create: yes
+          
